@@ -1,0 +1,43 @@
+@import '../../../common/styles/sass/mixins';
+
+.wrapper {
+  @include flex(row, space-between, center);
+
+  .menu {
+    width: 77px;
+    height: 77px;
+    background: linear-gradient(96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoContainer {
+    width: 200px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sideContainer{
+    @include flex(column, flex-start, center);
+    gap:26px;
+    .settings{
+      @include flex(row, flex-start, center);
+      .flag{
+        width: 20px;
+        height: 13px;
+      }
+      .language{
+        @include flex(row, flex-start, center);
+        gap:5px;
+      }
+    }
+    .login{
+      @include flex(column, flex-start, center);
+      gap:5px;
+    }
+  }
+}

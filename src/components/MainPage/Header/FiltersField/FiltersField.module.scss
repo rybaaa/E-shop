@@ -1,0 +1,29 @@
+@import '../../../../common/styles/sass/mixins';
+
+.container {
+  width: 624px;
+  height: 100%;
+  @include flex(column, flex-start, flex-start);
+  gap:23px;
+
+  .selectField {
+    @include flex(row, flex-start, flex-start);
+    gap:20px;
+    .select {
+      @include flex(row, flex-start, baseline);
+      gap: 5px;
+      @include text(12px, 300, 14px);
+    }
+
+    .faq {
+      @include text(12px, 300, 14px);
+    }
+  }
+  .input{
+    width: 624px;
+    height: 46px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+    border-image: linear-gradient(to right, #F64D4D, #4D5EF6) 2;
+  }
+;
+}
